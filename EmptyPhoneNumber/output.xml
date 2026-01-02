@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.13.2 on win32)" generated="2026-01-02T16:47:39.478660" rpa="false" schemaversion="5">
+<suite id="s1" name="testEmptyPhone" source="D:\Test Automation\TestAutomationLab\EmptyPhoneNumber\testEmptyPhone.robot">
+<test id="s1-t1" name="Register Fail Scenario" line="7">
+<kw name="Open Register Page" owner="resource">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-01-02T16:47:39.763807" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:7272/Lab4/Registration.html'.</msg>
+<arg>${REGISTER URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-01-02T16:47:39.763589" elapsed="1.303210"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-01-02T16:47:41.067353" elapsed="0.030223"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>1.0</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2026-01-02T16:47:41.098170" elapsed="0.000520"/>
+</kw>
+<kw name="Register Page Should Be Open" owner="resource">
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2026-01-02T16:47:42.106549" level="INFO">Page title is 'Registration'.</msg>
+<arg>Registration</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2026-01-02T16:47:41.099730" elapsed="1.006972"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-01-02T16:47:43.209417" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-01-02T16:47:42.106878" elapsed="1.103311"/>
+</kw>
+<status status="PASS" start="2026-01-02T16:47:41.099037" elapsed="2.111580"/>
+</kw>
+<status status="PASS" start="2026-01-02T16:47:39.762836" elapsed="3.448058"/>
+</kw>
+<kw name="Input User Info" owner="resourceEmptyPhoneNumber">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-02T16:47:43.212764" level="INFO">Typing text 'Somyod' into text field 'id=firstname'.</msg>
+<arg>id=firstname</arg>
+<arg>${FIRST NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-02T16:47:43.212326" elapsed="3.281406"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-02T16:47:46.494409" level="INFO">Typing text 'Sodsai' into text field 'id=lastname'.</msg>
+<arg>id=lastname</arg>
+<arg>${LAST NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-02T16:47:46.493961" elapsed="3.252569"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-02T16:47:49.748155" level="INFO">Typing text 'CS KKU' into text field 'id=organization'.</msg>
+<arg>id=organization</arg>
+<arg>${Organization}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-02T16:47:49.747404" elapsed="3.228506"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-02T16:47:52.977226" level="INFO">Typing text 'somyod@kkumail.com' into text field 'id=email'.</msg>
+<arg>id=email</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-02T16:47:52.976453" elapsed="3.199692"/>
+</kw>
+<status status="PASS" start="2026-01-02T16:47:43.211923" elapsed="12.964605"/>
+</kw>
+<kw name="Submit Registration Form" owner="resourceEmptyPhoneNumber">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-01-02T16:47:56.179617" level="INFO">Clicking button 'id=registerButton'.</msg>
+<arg>id=registerButton</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-02T16:47:56.179149" elapsed="3.244707"/>
+</kw>
+<status status="PASS" start="2026-01-02T16:47:56.178458" elapsed="3.245621"/>
+</kw>
+<kw name="Verify PHONE Missing Error" owner="resourceEmptyPhoneNumber">
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2026-01-02T16:48:00.434272" level="INFO">Page title is 'Registration'.</msg>
+<arg>Registration</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2026-01-02T16:47:59.426463" elapsed="1.008134"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-01-02T16:48:02.496393" level="INFO">Current page contains text '*Please enter your phone number!!'.</msg>
+<arg>*Please enter your phone number!!</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-01-02T16:48:00.435057" elapsed="2.062126"/>
+</kw>
+<status status="PASS" start="2026-01-02T16:47:59.425989" elapsed="3.071495"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-01-02T16:48:03.624389" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-01-02T16:48:02.499206" elapsed="1.125479"/>
+</kw>
+<kw name="Close Browser" owner="resource" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-01-02T16:48:03.632117" elapsed="4.808108"/>
+</kw>
+<status status="PASS" start="2026-01-02T16:48:03.631330" elapsed="4.809198"/>
+</kw>
+<doc>Test for Register Fail with empty phone number case Scenario</doc>
+<status status="PASS" start="2026-01-02T16:47:39.762010" elapsed="28.680160"/>
+</test>
+<status status="PASS" start="2026-01-02T16:47:39.480408" elapsed="28.963813"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="testEmptyPhone" id="s1" pass="1" fail="0" skip="0">testEmptyPhone</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
