@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.13.2 on win32)" generated="2026-01-02T16:30:07.371758" rpa="false" schemaversion="5">
+<suite id="s1" name="testEmptyName" source="D:\Test Automation\TestAutomationLab\EmptyFirstNameandLastName\testEmptyName.robot">
+<test id="s1-t1" name="Register Fail Scenario" line="7">
+<kw name="Open Register Page" owner="resource">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-01-02T16:30:07.647853" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:7272/Lab4/Registration.html'.</msg>
+<arg>${REGISTER URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-01-02T16:30:07.647633" elapsed="1.294424"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-01-02T16:30:08.942470" elapsed="0.040387"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>1.0</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2026-01-02T16:30:08.983144" elapsed="0.000644"/>
+</kw>
+<kw name="Register Page Should Be Open" owner="resource">
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2026-01-02T16:30:09.993911" level="INFO">Page title is 'Registration'.</msg>
+<arg>Registration</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2026-01-02T16:30:08.984560" elapsed="1.009506"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-01-02T16:30:11.103536" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-01-02T16:30:09.994281" elapsed="1.109751"/>
+</kw>
+<status status="PASS" start="2026-01-02T16:30:08.984231" elapsed="2.119902"/>
+</kw>
+<status status="PASS" start="2026-01-02T16:30:07.646872" elapsed="3.457314"/>
+</kw>
+<kw name="Input User Info" owner="resourceEmptyFirstNameandLastName">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-02T16:30:11.105777" level="INFO">Typing text 'CS KKU' into text field 'id=organization'.</msg>
+<arg>id=organization</arg>
+<arg>${Organization}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-02T16:30:11.105343" elapsed="3.192823"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-02T16:30:14.299385" level="INFO">Typing text 'somyod@kkumail.com' into text field 'id=email'.</msg>
+<arg>id=email</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-02T16:30:14.298718" elapsed="3.230245"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-02T16:30:17.530383" level="INFO">Typing text '091-001-1234' into text field 'id=phone'.</msg>
+<arg>id=phone</arg>
+<arg>${PHONE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-02T16:30:17.529634" elapsed="3.287174"/>
+</kw>
+<status status="PASS" start="2026-01-02T16:30:11.105002" elapsed="9.712219"/>
+</kw>
+<kw name="Submit Registration Form" owner="resourceEmptyFirstNameandLastName">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-01-02T16:30:20.822030" level="INFO">Clicking button 'id=registerButton'.</msg>
+<arg>id=registerButton</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-02T16:30:20.821507" elapsed="3.181958"/>
+</kw>
+<status status="PASS" start="2026-01-02T16:30:20.820703" elapsed="3.182936"/>
+</kw>
+<kw name="Verify Name Missing Error" owner="resourceEmptyFirstNameandLastName">
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2026-01-02T16:30:25.011538" level="INFO">Page title is 'Registration'.</msg>
+<arg>Registration</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2026-01-02T16:30:24.004833" elapsed="1.006945"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-01-02T16:30:27.036631" level="INFO">Current page contains text '*Please enter your name!!'.</msg>
+<arg>*Please enter your name!!</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-01-02T16:30:25.012113" elapsed="2.024858"/>
+</kw>
+<status status="PASS" start="2026-01-02T16:30:24.004449" elapsed="3.032787"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-01-02T16:30:28.155927" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-01-02T16:30:27.039535" elapsed="1.116681"/>
+</kw>
+<kw name="Close Browser" owner="resource" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-01-02T16:30:28.159332" elapsed="3.787971"/>
+</kw>
+<status status="PASS" start="2026-01-02T16:30:28.158351" elapsed="3.789264"/>
+</kw>
+<doc>Test for Register Fail with empty name case Scenario</doc>
+<status status="PASS" start="2026-01-02T16:30:07.646145" elapsed="24.302188"/>
+</test>
+<status status="PASS" start="2026-01-02T16:30:07.373825" elapsed="24.576594"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="testEmptyName" id="s1" pass="1" fail="0" skip="0">testEmptyName</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
